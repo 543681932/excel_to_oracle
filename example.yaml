@@ -1,0 +1,23 @@
+EXCEL:
+  FILE: C:\Users\54368\Desktop\Excel导入Oracle程序开发\test_excel.xlsx
+  SHEET: 第一页
+  HEAD: 2
+  START: 3
+  END: 6
+  MAP_LIST:
+    - EXCEL_COL: 丁
+      DB_COL: col1
+    - EXCEL_COL: 乙
+      DB_COL: col2
+      DATA_TYPE: int
+    - EXCEL_COL: 丙
+      DB_COL: col3
+      DATA_TYPE: date|%Y%m%d
+  DB_TABLE: temp_table
+  
+DB:
+  USER: system
+  PASSWORD: oracle
+  CON_STR: 192.168.243.131:1521/xe
+  BEFORE_SQL: truncate table temp_table
+  AFTER_SQL: 
